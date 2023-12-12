@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="css/estilo.css" rel="stylesheet">
+		<script src='js/codigo.js'></script>
+	</head>
+	<body>
+		<section>
+			<article id="notas">
+				<h1>Notas</h1>
+				<div class="nota">
+					<h3>No se ha cargado correctamente</h3>
+					<p>
+						La base de datos no se ha cargado correctamente
+					</p>
+					<button class="borrarNota">Borrar</button>
+				</div>
+				<form id="id_formularioNota" class="esconder">
+					<input type="text" id="id_titulo" placeholder="Título...">
+					<textarea id="id_contenido" rows="5" placeholder="Contenido..."></textarea>
+					<div>
+						<input type="button" id="id_cancelarNota" value="Cancelar">
+						<input type="reset" value="Reiniciar">
+						<input type="submit" value="Crear">
+					</div>
+				</form>
+				<button id="id_nuevaNota">Nueva</button>
+			</article>
+			<article id="tareas">
+				<h1>Tareas</h1>
+				<p class="tarea">Tarea</p>
+				<form id="id_formularioTarea">
+					<textarea id="id_tarea" placeholder="Nueva..." oninput="this.style.height = ''; this.style.height = this.scrollHeight +'px'"></textarea>
+				</form>
+			</article>
+		</section>
+	</body>
+</html>

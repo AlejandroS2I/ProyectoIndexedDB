@@ -1,0 +1,184 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+body {
+	background-color: #282828;
+	color: #FFF;
+	height: 100vh;
+}
+
+section {
+	display: flex;
+	scroll-snap-type: y mandatory;
+}
+
+article {
+	scroll-snap-align: center;
+}
+
+h1 {
+	font-size: 2em;
+	font-weight: 900;
+}
+
+input, textarea {
+	outline: none;
+}
+
+button, input[type="submit"], input[type="reset"], input[type="button"] {
+	background-color: transparent;
+	border: 1px solid #FFF;
+	border-radius: 5px;
+	padding: 5px 5px;
+	color: inherit;
+	min-width: fit-content;
+}
+
+button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
+	cursor: pointer;
+	background-color: #FFF;
+	color: #000;
+}
+
+button:focus, input[type="submit"]:focus, input[type="reset"]:focus, input[type="button"]:focus {
+	cursor: pointer;
+	background-color: #FFF;
+	color: #000;
+}
+
+.esconder {
+	display: none !important;
+}
+
+/* Notas */
+article#notas {
+	width: 70vw;
+	height: 100vh;
+	border: 1px solid #FFF;
+	display: flex;
+	gap: 10px;
+	flex-direction: column;
+	align-items: stretch;
+	padding: 10px;
+	overflow: auto;
+}
+
+/* Nota */
+article#notas div.nota {
+	position: relative;
+	border: 1px solid #FFF;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+article#notas div.nota p {
+	text-align: justify;
+	margin-top: 5px;
+}
+
+article#notas div.nota button {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 10%;
+}
+
+/* Botón de nueva nota */
+article#notas button#id_nuevaNota {
+	font-weight: bold;
+	font-size: 1em;
+}
+
+/* Formulario de nueva nota */
+article#notas form {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	border: 1px solid #FFF;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+article#notas form div {
+	display: flex;
+	justify-content: stretch;
+	flex-wrap: wrap;
+	gap: 5px;
+}
+
+article#notas form div * {
+	flex: 1 1 auto;
+}
+
+article#notas form input[type="text"], article#notas form textarea {
+	background-color: #333333;
+	border: 0;
+	border-bottom: 1px solid #FFF;
+	color: #FFF;
+	padding: 5px;
+}
+
+article#notas form input[type="text"] {
+	font-size: 1.17em;
+	font-weight: bold;
+}
+
+article#notas form textarea {
+	resize: vertical;
+}
+
+/* ToDo */
+article#tareas {
+	width: 30vw;
+	min-width: 250px;
+	height: 100vh;
+	border: 1px solid #FFF;
+	display: flex;
+	gap: 10px;
+	flex-direction: column;
+	align-items: stretch;
+	padding: 10px;
+	overflow: auto;
+	text-align: justify;
+}
+
+article#tareas textarea {
+	background-color: #282828;
+	outline: none;
+	border: 0;
+	height: 18px;
+	width: 100%;
+	color: white;
+	font-size: 16px;
+	resize: none;
+}
+
+.tarea:hover {
+	cursor: pointer;
+	text-decoration: line-through;
+}
+
+@media (max-width:650px) {
+	section {
+		display: block;
+		width: fit-content;
+		height: 100%;
+		overflow: auto;
+	}
+	article#notas {
+		width: 100vw;
+		max-height: 100vh;
+	}
+	article#tareas {
+		width: 100vw;
+		max-height: 100vh;
+	}
+}
