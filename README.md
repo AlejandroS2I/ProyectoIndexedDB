@@ -1,2 +1,2 @@
 # ProyectoIndexedDB
-En este proyecto desarrollaremos la utilización de IndexedDB para unas útiles tareas
+Este proyecto se puede acceder [aquí](https://alejandros2i.github.io/ProyectoIndexedDB/) para probar o utilizarlo
